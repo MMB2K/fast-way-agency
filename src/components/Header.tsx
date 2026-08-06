@@ -3,16 +3,19 @@ import { Link } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/fast-way-logo.png";
 import { Button } from "@/components/ui/button";
-
-const navItems = [
-  { to: "/", label: "Accueil" },
-  { to: "/etudes", label: "Études" },
-  { to: "/tourisme-medical", label: "Tourisme médical" },
-  { to: "/mauritanie", label: "Mauritanie" },
-] as const;
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 export function Header() {
   const [open, setOpen] = useState(false);
+  const { t } = useLanguage();
+
+  const navItems = [
+    { to: "/" as const, label: t.nav.home },
+    { to: "/etudes" as const, label: t.nav.etudes },
+    { to: "/tourisme-medical" as const, label: t.nav.medical },
+    { to: "/mauritanie" as const, label: t.nav.mauritanie },
+  ];
 
   return (
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur-md print:hidden">
@@ -38,21 +41,25 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="hidden lg:block">
+        <div className="hidden items-center gap-3 lg:flex">
+          <LanguageSwitcher />
           <Button asChild className="rounded-full bg-orange text-white hover:bg-orange/90">
-            <Link to="/contact">Nous contacter</Link>
+            <Link to="/contact">{t.nav.contactCta}</Link>
           </Button>
         </div>
 
-        <button
-          type="button"
-          aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
-          aria-expanded={open}
-          className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border lg:hidden"
-          onClick={() => setOpen((v) => !v)}
-        >
-          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-        </button>
+        <div className="flex items-center gap-2 lg:hidden">
+          <LanguageSwitcher />
+          <button
+            type="button"
+            aria-label={open ? t.nav.closeMenu : t.nav.openMenu}
+            aria-expanded={open}
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border"
+            onClick={() => setOpen((v) => !v)}
+          >
+            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
+        </div>
       </div>
 
       {open && (
@@ -71,7 +78,7 @@ export function Header() {
               </Link>
             ))}
             <Button asChild className="mt-2 w-full rounded-full bg-orange text-white hover:bg-orange/90">
-              <Link to="/contact" onClick={() => setOpen(false)}>Nous contacter</Link>
+              <Link to="/contact" onClick={() => setOpen(false)}>{t.nav.contactCta}</Link>
             </Button>
           </nav>
         </div>

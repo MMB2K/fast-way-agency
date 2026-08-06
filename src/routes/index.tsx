@@ -3,6 +3,7 @@ import { ArrowRight, GraduationCap, Stethoscope, Compass, ShieldCheck, Sparkles,
 import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/components/SectionHeading";
 import { CTABanner } from "@/components/CTABanner";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -20,42 +21,13 @@ export const Route = createFileRoute("/")({
   component: HomePage,
 });
 
-const services = [
-  {
-    to: "/etudes" as const,
-    icon: GraduationCap,
-    title: "Études internationales",
-    desc: "Turquie, Canada, Espagne et plus. Dossier, visa et inscription pris en charge de A à Z.",
-  },
-  {
-    to: "/tourisme-medical" as const,
-    icon: Stethoscope,
-    title: "Tourisme médical en Turquie",
-    desc: "Cliniques accréditées, séjours organisés et suivi personnalisé pour votre tranquillité.",
-  },
-  {
-    to: "/mauritanie" as const,
-    icon: Compass,
-    title: "Découverte de la Mauritanie",
-    desc: "Chinguetti, Banc d'Arguin, désert de l'Adrar. L'aventure authentique, à votre rythme.",
-  },
-];
-
-const advantages = [
-  { icon: ShieldCheck, title: "Confiance", text: "Partenaires sélectionnés et processus transparent." },
-  { icon: HeartHandshake, title: "Accompagnement", text: "Un interlocuteur dédié, du premier contact au retour." },
-  { icon: Sparkles, title: "Sur-mesure", text: "Chaque projet est conçu pour votre profil et vos objectifs." },
-  { icon: Globe2, title: "Expertise globale", text: "Une équipe qui connaît le terrain dans chaque destination." },
-];
-
-const stats = [
-  { value: "10+", label: "Destinations" },
-  { value: "250+", label: "Clients accompagnés" },
-  { value: "5 ans", label: "D'expérience" },
-  { value: "24/7", label: "Support" },
-];
+const serviceIcons = [GraduationCap, Stethoscope, Compass];
+const serviceLinks = ["/etudes", "/tourisme-medical", "/mauritanie"] as const;
+const advantageIcons = [ShieldCheck, HeartHandshake, Sparkles, Globe2];
 
 function HomePage() {
+  const { t } = useLanguage();
+
   return (
     <>
       {/* Hero */}
@@ -75,17 +47,16 @@ function HomePage() {
         <div className="mx-auto flex min-h-[78vh] max-w-6xl flex-col justify-center px-4 py-20 text-white sm:px-6 sm:py-28">
           <span className="inline-flex w-fit items-center gap-2 rounded-full border border-white/30 bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider backdrop-blur">
             <Sparkles className="h-3.5 w-3.5 text-orange" />
-            Fast Way Agency
+            {t.home.badge}
           </span>
           <h1 className="mt-6 max-w-3xl font-display text-4xl font-bold leading-[1.05] text-balance sm:text-6xl lg:text-7xl">
-            Explorez le monde,
+            {t.home.title1}
             <span className="block bg-gradient-to-r from-orange to-orange-soft bg-clip-text text-transparent">
-              nous gérons le reste.
+              {t.home.title2}
             </span>
           </h1>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-white/85 sm:text-lg">
-            Études à l'étranger, tourisme médical en Turquie, voyages en Mauritanie. Une agence,
-            trois expertises, et un accompagnement humain à chaque étape.
+            {t.home.subtitle}
           </p>
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
             <Button
@@ -94,7 +65,7 @@ function HomePage() {
               className="rounded-full bg-orange px-8 text-base font-semibold text-white hover:bg-orange/90"
             >
               <Link to="/contact">
-                Nous contacter <ArrowRight className="ml-2 h-4 w-4" />
+                {t.home.ctaContact} <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
             <Button
@@ -103,7 +74,7 @@ function HomePage() {
               variant="outline"
               className="rounded-full border-white/40 bg-white/10 px-8 text-base font-semibold text-white backdrop-blur hover:bg-white/20 hover:text-white"
             >
-              <Link to="/etudes">Découvrir nos services</Link>
+              <Link to="/etudes">{t.home.ctaServices}</Link>
             </Button>
           </div>
         </div>
@@ -112,7 +83,7 @@ function HomePage() {
       {/* Stats */}
       <section className="border-y border-border bg-cream/60">
         <div className="mx-auto grid max-w-6xl grid-cols-2 gap-6 px-4 py-10 sm:px-6 md:grid-cols-4">
-          {stats.map((s) => (
+          {t.home.stats.map((s) => (
             <div key={s.label} className="text-center">
               <div className="font-display text-3xl font-bold text-navy-deep sm:text-4xl">{s.value}</div>
               <div className="mt-1 text-xs font-medium uppercase tracking-wider text-muted-foreground sm:text-sm">
@@ -126,28 +97,31 @@ function HomePage() {
       {/* Services */}
       <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
         <SectionHeading
-          eyebrow="Nos services"
-          title="Trois expertises, une seule agence"
-          description="Choisissez le service qui correspond à votre projet. Nous nous occupons de tout le reste."
+          eyebrow={t.home.servicesEyebrow}
+          title={t.home.servicesTitle}
+          description={t.home.servicesDescription}
         />
         <div className="mt-12 grid gap-6 md:grid-cols-3">
-          {services.map((s) => (
-            <Link
-              key={s.to}
-              to={s.to}
-              className="group flex flex-col rounded-3xl border border-border bg-card p-7 shadow-sm transition-all hover:-translate-y-1 hover:border-orange/40 hover:shadow-xl"
-            >
-              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-teal/30 to-navy/10 text-navy-deep">
-                <s.icon className="h-7 w-7" />
-              </div>
-              <h3 className="mt-5 font-display text-xl font-bold">{s.title}</h3>
-              <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
-              <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-orange">
-                En savoir plus
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </span>
-            </Link>
-          ))}
+          {t.home.services.map((s, i) => {
+            const Icon = serviceIcons[i];
+            return (
+              <Link
+                key={s.title}
+                to={serviceLinks[i]}
+                className="group flex flex-col rounded-3xl border border-border bg-card p-7 shadow-sm transition-all hover:-translate-y-1 hover:border-orange/40 hover:shadow-xl"
+              >
+                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-teal/30 to-navy/10 text-navy-deep">
+                  <Icon className="h-7 w-7" />
+                </div>
+                <h3 className="mt-5 font-display text-xl font-bold">{s.title}</h3>
+                <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
+                <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-orange">
+                  {t.home.learnMore}
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </span>
+              </Link>
+            );
+          })}
         </div>
       </section>
 
@@ -155,28 +129,31 @@ function HomePage() {
       <section className="bg-brand-gradient-soft">
         <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
           <SectionHeading
-            eyebrow="Pourquoi nous"
-            title="Une agence, vraiment à vos côtés"
-            description="Nous croyons qu'un bon voyage commence par une vraie écoute. Voici ce qui fait la différence."
+            eyebrow={t.home.whyEyebrow}
+            title={t.home.whyTitle}
+            description={t.home.whyDescription}
           />
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {advantages.map((a) => (
-              <div key={a.title} className="rounded-3xl bg-card p-6 shadow-sm">
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-orange/10 text-orange">
-                  <a.icon className="h-6 w-6" />
+            {t.home.advantages.map((a, i) => {
+              const Icon = advantageIcons[i];
+              return (
+                <div key={a.title} className="rounded-3xl bg-card p-6 shadow-sm">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-orange/10 text-orange">
+                    <Icon className="h-6 w-6" />
+                  </div>
+                  <h3 className="mt-4 font-display text-lg font-bold">{a.title}</h3>
+                  <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">{a.text}</p>
                 </div>
-                <h3 className="mt-4 font-display text-lg font-bold">{a.title}</h3>
-                <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">{a.text}</p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
 
       <CTABanner
-        title="Prêt à partir ?"
-        subtitle="Parlons de votre projet. Une réponse sous 24h, un devis gratuit, zéro engagement."
-        ctaLabel="Démarrer mon projet"
+        title={t.home.ctaTitle}
+        subtitle={t.home.ctaSubtitle}
+        ctaLabel={t.home.ctaLabel}
       />
     </>
   );

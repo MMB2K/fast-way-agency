@@ -6,7 +6,7 @@ import path from 'path';
 import tsconfigPaths from 'vite-tsconfig-paths';
 
 export default defineConfig({
-base: '/fast-way-agency/',
+  // Pas de "base" : Vercel sert le site à la racine du domaine.
   plugins: [
     TanStackRouterVite(),
     react(),
