@@ -197,7 +197,11 @@ function ContactPage() {
               <ul className="mt-5 space-y-4 text-sm">
                 <li className="flex items-start gap-3">
                   <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-orange" />
-                  <span>Nouakchott, Mauritanie</span>
+                  <span>
+                    {t.company.addressLine1}
+                    <br />
+                    {t.company.addressLine2}
+                  </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Clock className="mt-0.5 h-5 w-5 shrink-0 text-orange" />
@@ -208,12 +212,12 @@ function ContactPage() {
                 </li>
                 <li className="flex items-start gap-3">
                   <Phone className="mt-0.5 h-5 w-5 shrink-0 text-orange" />
-                  <a href="tel:+22237448997" className="hover:underline">+222 37 44 89 97</a>
+                  <a href="tel:+22237448997" className="hover:underline">{t.company.phone}</a>
                 </li>
                 <li className="flex items-start gap-3">
                   <Mail className="mt-0.5 h-5 w-5 shrink-0 text-orange" />
-                  <a href="mailto:fastwayagency97@gmail.com" className="break-all hover:underline">
-                    fastwayagency97@gmail.com
+                  <a href={`mailto:${t.company.email}`} className="break-all hover:underline">
+                    {t.company.email}
                   </a>
                 </li>
               </ul>

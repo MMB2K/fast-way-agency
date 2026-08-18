@@ -1,5 +1,5 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { CheckCircle2, FileText, Plane, GraduationCap, Home } from "lucide-react";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { CheckCircle2, FileText, Plane, GraduationCap, Home, ArrowRight } from "lucide-react";
 import { SectionHeading } from "@/components/SectionHeading";
 import { CTABanner } from "@/components/CTABanner";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -11,7 +11,7 @@ export const Route = createFileRoute("/etudes")({
       {
         name: "description",
         content:
-          "Étudiez en Turquie, au Canada, en Espagne et bien plus. Fast Way Agency vous accompagne sur le dossier, le visa, l'inscription et le logement.",
+          "Étudiez en Turquie, en Espagne, en Allemagne, en Pologne et bien plus. Fast Way Agency vous accompagne sur le dossier, le visa, l'inscription et le logement.",
       },
       { property: "og:title", content: "Études internationales — Fast Way Agency" },
       {
@@ -102,6 +102,27 @@ function EtudesPage() {
               );
             })}
           </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+        <div className="flex flex-col items-start justify-between gap-6 rounded-3xl border border-border bg-card p-8 shadow-sm sm:flex-row sm:items-center sm:p-10">
+          <div>
+            <span className="inline-block rounded-full bg-teal/20 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-navy-deep">
+              {t.etudes.partnersTeaserEyebrow}
+            </span>
+            <h3 className="mt-3 font-display text-xl font-bold sm:text-2xl">{t.etudes.partnersTeaserTitle}</h3>
+            <p className="mt-2 max-w-xl text-sm leading-relaxed text-muted-foreground">
+              {t.etudes.partnersTeaserText}
+            </p>
+          </div>
+          <Link
+            to="/partenaires"
+            className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-orange px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-orange/90"
+          >
+            {t.etudes.partnersTeaserCta}
+            <ArrowRight className="h-4 w-4" />
+          </Link>
         </div>
       </section>
 

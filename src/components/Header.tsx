@@ -13,8 +13,8 @@ export function Header() {
   const navItems = [
     { to: "/" as const, label: t.nav.home },
     { to: "/etudes" as const, label: t.nav.etudes },
-    { to: "/tourisme-medical" as const, label: t.nav.medical },
-    { to: "/mauritanie" as const, label: t.nav.mauritanie },
+    { to: "/partenaires" as const, label: t.nav.partenaires },
+    { to: "/a-propos" as const, label: t.nav.apropos },
   ];
 
   return (
@@ -32,7 +32,7 @@ export function Header() {
             <Link
               key={item.to}
               to={item.to}
-              className="rounded-full px-4 py-2 text-sm font-medium text-foreground/80 transition-colors hover:bg-muted hover:text-foreground"
+              className="whitespace-nowrap rounded-full px-3 py-2 text-sm font-medium text-foreground/80 transition-colors hover:bg-muted hover:text-foreground"
               activeProps={{ className: "bg-muted text-navy-deep font-semibold" }}
               activeOptions={{ exact: item.to === "/" }}
             >

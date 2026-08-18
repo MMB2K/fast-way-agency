@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, GraduationCap, Stethoscope, Compass, ShieldCheck, Sparkles, HeartHandshake, Globe2 } from "lucide-react";
+import { ArrowRight, GraduationCap, Handshake, FileCheck2, ShieldCheck, Sparkles, HeartHandshake, Globe2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/components/SectionHeading";
 import { CTABanner } from "@/components/CTABanner";
@@ -8,21 +8,21 @@ import { useLanguage } from "@/i18n/LanguageContext";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Fast Way Agency — Explorez le monde, nous gérons le reste" },
+      { title: "Fast Way Agency — Votre projet d'études, notre accompagnement" },
       {
         name: "description",
         content:
-          "Agence de voyage et de conseil : études à l'étranger, tourisme médical en Turquie, circuits en Mauritanie. Accompagnement complet par Fast Way Agency.",
+          "Agence spécialisée dans l'orientation et la mobilité éducative internationale, basée à Nouakchott. Études en Turquie, Espagne, Allemagne, Pologne et bien plus.",
       },
       { property: "og:title", content: "Fast Way Agency" },
-      { property: "og:description", content: "Explorez le monde, nous gérons le reste." },
+      { property: "og:description", content: "Votre projet d'études, notre accompagnement." },
     ],
   }),
   component: HomePage,
 });
 
-const serviceIcons = [GraduationCap, Stethoscope, Compass];
-const serviceLinks = ["/etudes", "/tourisme-medical", "/mauritanie"] as const;
+const serviceIcons = [GraduationCap, Handshake, FileCheck2];
+const serviceLinks = ["/etudes", "/partenaires", "/contact"] as const;
 const advantageIcons = [ShieldCheck, HeartHandshake, Sparkles, Globe2];
 
 function HomePage() {

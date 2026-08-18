@@ -2,24 +2,24 @@ export const translations = {
   fr: {
     meta: {
       home: {
-        title: "Fast Way Agency — Explorez le monde, nous gérons le reste",
+        title: "Fast Way Agency — Votre projet d'études, notre accompagnement",
         description:
-          "Agence de voyage et de conseil : études à l'étranger, tourisme médical en Turquie, circuits en Mauritanie. Accompagnement complet par Fast Way Agency.",
+          "Agence spécialisée dans l'orientation et la mobilité éducative internationale, basée à Nouakchott. Études en Turquie, Espagne, Allemagne, Pologne et bien plus.",
       },
       etudes: {
         title: "Études internationales — Fast Way Agency",
         description:
-          "Étudiez en Turquie, au Canada, en Espagne et bien plus. Fast Way Agency vous accompagne sur le dossier, le visa, l'inscription et le logement.",
+          "Étudiez en Turquie, en Espagne, en Allemagne, en Pologne et bien plus. Fast Way Agency vous accompagne sur le dossier, le visa, l'inscription et le logement.",
       },
-      medical: {
-        title: "Tourisme médical en Turquie — Fast Way Agency",
+      partenaires: {
+        title: "Nos partenaires — Fast Way Agency",
         description:
-          "Soins de qualité en Turquie : esthétique, dentaire, capillaire, ophtalmologie. Cliniques accréditées et accompagnement complet.",
+          "Universités, écoles et organismes partenaires de Fast Way Agency à travers le monde : Pologne, Allemagne, Espagne, Corée du Sud, Malaisie et plus.",
       },
-      mauritanie: {
-        title: "Découverte de la Mauritanie — Fast Way Agency",
+      apropos: {
+        title: "À propos — Fast Way Agency",
         description:
-          "Chinguetti, Banc d'Arguin, désert de l'Adrar, train du désert. Vivez l'aventure mauritanienne authentique avec Fast Way Agency.",
+          "Fast Way Agency, agence spécialisée dans l'orientation et la mobilité éducative internationale, basée à Nouakchott, en Mauritanie, depuis 2023.",
       },
       contact: {
         title: "Contact — Fast Way Agency",
@@ -30,20 +30,28 @@ export const translations = {
     nav: {
       home: "Accueil",
       etudes: "Études",
-      medical: "Tourisme médical",
-      mauritanie: "Mauritanie",
+      partenaires: "Partenaires",
+      apropos: "À propos",
       contactCta: "Nous contacter",
       openMenu: "Ouvrir le menu",
       closeMenu: "Fermer le menu",
     },
     footer: {
       tagline:
-        "Votre partenaire de confiance pour les études à l'étranger, le tourisme médical et la découverte de la Mauritanie.",
+        "Votre partenaire de confiance pour l'orientation et la mobilité éducative internationale, basée à Nouakchott, en Mauritanie.",
       navigation: "Navigation",
       contact: "Contact",
+      addressLabel: "Adresse",
       hours: "Lundi – Samedi",
       hoursTime: "9h00 – 18h00",
       rights: "Tous droits réservés.",
+    },
+    company: {
+      name: "Fast Way Agency",
+      addressLine1: "Soco Ext 0206, TVZ",
+      addressLine2: "Nouakchott, Mauritanie",
+      phone: "+222 37 44 89 97",
+      email: "fastwayagency97@gmail.com",
     },
     whatsapp: {
       label: "Contacter Fast Way Agency sur WhatsApp",
@@ -61,48 +69,48 @@ export const translations = {
     },
     home: {
       badge: "Fast Way Agency",
-      title1: "Explorez le monde,",
-      title2: "nous gérons le reste.",
+      title1: "Votre projet d'études,",
+      title2: "notre accompagnement.",
       subtitle:
-        "Études à l'étranger, tourisme médical en Turquie, voyages en Mauritanie. Une agence, trois expertises, et un accompagnement humain à chaque étape.",
+        "Orientation académique, admission, visa et installation. Une agence spécialisée dans la mobilité éducative internationale, à vos côtés à chaque étape.",
       ctaContact: "Nous contacter",
       ctaServices: "Découvrir nos services",
       stats: [
-        { value: "10+", label: "Destinations" },
+        { value: "11+", label: "Destinations" },
         { value: "250+", label: "Clients accompagnés" },
-        { value: "5 ans", label: "D'expérience" },
+        { value: "2023", label: "Année de création" },
         { value: "24/7", label: "Support" },
       ],
       servicesEyebrow: "Nos services",
-      servicesTitle: "Trois expertises, une seule agence",
+      servicesTitle: "Une agence, un accompagnement complet",
       servicesDescription:
         "Choisissez le service qui correspond à votre projet. Nous nous occupons de tout le reste.",
       services: [
         {
           title: "Études internationales",
-          desc: "Turquie, Canada, Espagne et plus. Dossier, visa et inscription pris en charge de A à Z.",
+          desc: "Turquie, Espagne, Allemagne, Pologne et plus. Dossier, visa et inscription pris en charge de A à Z.",
         },
         {
-          title: "Tourisme médical en Turquie",
-          desc: "Cliniques accréditées, séjours organisés et suivi personnalisé pour votre tranquillité.",
+          title: "Universités partenaires",
+          desc: "Un réseau d'établissements et d'organismes partenaires soigneusement sélectionnés à l'international.",
         },
         {
-          title: "Découverte de la Mauritanie",
-          desc: "Chinguetti, Banc d'Arguin, désert de l'Adrar. L'aventure authentique, à votre rythme.",
+          title: "Accompagnement visa & installation",
+          desc: "Constitution du dossier, démarches de visa et accompagnement jusqu'à votre installation sur place.",
         },
       ],
       learnMore: "En savoir plus",
       whyEyebrow: "Pourquoi nous",
       whyTitle: "Une agence, vraiment à vos côtés",
       whyDescription:
-        "Nous croyons qu'un bon voyage commence par une vraie écoute. Voici ce qui fait la différence.",
+        "Nous croyons qu'un bon parcours académique commence par une vraie écoute. Voici ce qui fait la différence.",
       advantages: [
         { title: "Confiance", text: "Partenaires sélectionnés et processus transparent." },
         { title: "Accompagnement", text: "Un interlocuteur dédié, du premier contact au retour." },
         { title: "Sur-mesure", text: "Chaque projet est conçu pour votre profil et vos objectifs." },
         { title: "Expertise globale", text: "Une équipe qui connaît le terrain dans chaque destination." },
       ],
-      ctaTitle: "Prêt à partir ?",
+      ctaTitle: "Prêt à démarrer votre projet ?",
       ctaSubtitle: "Parlons de votre projet. Une réponse sous 24h, un devis gratuit, zéro engagement.",
       ctaLabel: "Démarrer mon projet",
     },
@@ -114,30 +122,31 @@ export const translations = {
       destinationsEyebrow: "Destinations",
       destinationsTitle: "Choisissez votre pays d'études",
       destinationsDescription:
-        "Nous travaillons avec un réseau d'universités partenaires sur trois continents.",
+        "Nous travaillons avec un réseau d'universités, d'écoles et d'organismes partenaires sur plusieurs continents.",
       destinations: [
         { flag: "🇹🇷", name: "Turquie", points: ["Universités reconnues", "Bourses disponibles", "Coût accessible"] },
-        {
-          flag: "🇨🇦",
-          name: "Canada",
-          points: ["Diplômes mondialement reconnus", "Permis de travail post-études", "Anglais & français"],
-        },
-        { flag: "🇪🇸", name: "Espagne", points: ["Espace européen", "Cadre de vie agréable", "Espagnol & anglais"] },
-        {
-          flag: "🇫🇷",
-          name: "France",
-          points: ["Universités prestigieuses", "Études en français", "Système d'aide étudiant"],
-        },
+        { flag: "🇪🇸", name: "Espagne", points: ["Écoles de langue reconnues", "Cadre de vie agréable", "Espagnol & anglais"] },
         {
           flag: "🇩🇪",
           name: "Allemagne",
           points: ["Frais réduits voire gratuits", "Universités techniques de pointe", "Forte employabilité"],
+        },
+        { flag: "🇵🇱", name: "Pologne", points: ["Diplômes reconnus dans l'UE", "Coût de la vie accessible", "Programmes en anglais"] },
+        { flag: "🇮🇪", name: "Irlande", points: ["Anglophone", "Permis de travail post-études", "Pôle tech & pharma"] },
+        { flag: "🇨🇳", name: "Chine", points: ["Bourses gouvernementales", "Universités en forte croissance", "Faible coût de la vie"] },
+        {
+          flag: "🇨🇦",
+          name: "Canada",
+          points: ["Diplômes mondialement reconnus", "Permis de travail post-études", "Anglais & français"],
         },
         {
           flag: "🇲🇾",
           name: "Malaisie",
           points: ["Programmes en anglais", "Coût de la vie bas", "Diplômes internationaux"],
         },
+        { flag: "🇰🇷", name: "Corée du Sud", points: ["Écoles internationales anglophones", "Innovation & technologie", "Bourses disponibles"] },
+        { flag: "🇦🇺", name: "Australie", points: ["Universités de rang mondial", "Permis de travail post-études", "Qualité de vie"] },
+        { flag: "🇺🇸", name: "États-Unis", points: ["Établissements prestigieux", "Large choix de filières", "Réseau international"] },
       ],
       processEyebrow: "Notre processus",
       processTitle: "4 étapes simples vers votre départ",
@@ -147,98 +156,61 @@ export const translations = {
         { title: "Visa & voyage", text: "Préparation complète du dossier visa et logistique du départ." },
         { title: "Installation", text: "Logement, ouverture de compte, accompagnement à l'arrivée." },
       ],
+      partnersTeaserEyebrow: "Nos réseaux",
+      partnersTeaserTitle: "Un réseau d'universités et d'organismes partenaires",
+      partnersTeaserText:
+        "Découvrez les établissements et organismes avec lesquels nous travaillons directement pour votre admission.",
+      partnersTeaserCta: "Voir nos partenaires",
       ctaTitle: "Votre projet d'études commence ici",
       ctaSubtitle:
         "Recevez une évaluation gratuite de votre dossier et la liste des universités adaptées à votre profil.",
       ctaLabel: "Évaluer mon dossier",
     },
-    medical: {
-      badge: "Tourisme médical",
-      title: "La Turquie, référence mondiale du soin",
+    partenaires: {
+      badge: "Partenaires",
+      title: "Nos universités et organismes partenaires",
       subtitle:
-        "Profitez d'une expertise médicale de haut niveau, à des tarifs accessibles, dans un cadre confortable. Tout est organisé : voyage, soins, hébergement et suivi.",
-      specialtiesEyebrow: "Spécialités",
-      specialtiesTitle: "Des soins pour chaque besoin",
-      specialtiesDescription:
-        "Nos partenaires couvrent l'ensemble des principales spécialités médicales et esthétiques.",
-      specialties: [
-        { title: "Chirurgie esthétique" },
-        { title: "Soins dentaires" },
-        { title: "Greffe capillaire" },
-        { title: "Ophtalmologie" },
-        { title: "Chirurgie bariatrique" },
-        { title: "Bilans de santé" },
+        "Nous travaillons directement avec un réseau d'établissements et d'organismes internationaux pour sécuriser votre admission et vos démarches.",
+      schoolsEyebrow: "Établissements",
+      schoolsTitle: "Universités & écoles partenaires",
+      schoolsDescription: "Nos établissements partenaires pour vos études à l'étranger.",
+      servicesEyebrow: "Organismes",
+      servicesTitle: "Partenaires de services",
+      servicesDescription: "Nos partenaires pour le compte bloqué, l'assurance et les démarches administratives.",
+      list: [
+        { name: "WSB University", country: "Pologne", domain: "wsb.edu.pl", type: "school" },
+        { name: "CBS International Business School", country: "Allemagne", domain: "cbs.de", type: "school" },
+        { name: "Proyecto Español", country: "Espagne (Alicante)", domain: "proyectoespanol.com", type: "school" },
+        { name: "iNMSOL", country: "Espagne", domain: "inmsol.com", type: "school" },
+        { name: "ILSC Group", country: "International", domain: "ilsc.com", type: "school" },
+        { name: "Woosong University", country: "Corée du Sud", domain: "wsu.ac.kr", type: "school" },
+        { name: "Lincoln University", country: "Malaisie", domain: "lincoln.edu.my", type: "school" },
+        { name: "Expatrio", country: "Allemagne", domain: "expatrio.com", type: "service" },
+        { name: "Fintiba", country: "Allemagne", domain: "fintiba.com", type: "service" },
       ],
-      careEyebrow: "Notre prise en charge",
-      careTitle: "Vous vous reposez, nous organisons tout",
-      care: [
-        { title: "Transferts aéroport", text: "Prise en charge à l'arrivée et au départ." },
-        { title: "Hébergement", text: "Hôtels partenaires confortables et bien situés." },
-        { title: "Traduction", text: "Interprète francophone à chaque rendez-vous." },
-        { title: "Suivi médical", text: "Consultations pré et post-opératoires planifiées." },
-        { title: "Cliniques certifiées", text: "Établissements accrédités JCI et médecins reconnus." },
-        { title: "Assistance 24/7", text: "Un contact dédié, joignable à tout moment." },
-      ],
-      qualityTitle: "Qualité et sécurité, sans compromis",
-      qualityText:
-        "Nous ne travaillons qu'avec des cliniques accréditées internationalement et des médecins certifiés, dont les résultats sont vérifiés. Votre sécurité passe avant tout.",
-      ctaTitle: "Recevez un devis personnalisé",
-      ctaSubtitle:
-        "Décrivez-nous votre besoin, nous revenons vers vous avec un programme complet et un devis transparent.",
-      ctaLabel: "Demander un devis",
+      ctaTitle: "Votre établissement n'est pas dans la liste ?",
+      ctaSubtitle: "Nous élargissons continuellement notre réseau. Parlez-nous de votre projet.",
+      ctaLabel: "Nous contacter",
     },
-    mauritanie: {
-      badge: "Mauritanie",
-      title: "Le Sahara, à l'état pur.",
-      subtitle:
-        "Cités millénaires, dunes infinies, oasis cachées et hospitalité légendaire. La Mauritanie vous attend pour une aventure rare, hors des sentiers battus.",
-      discoverEyebrow: "À découvrir",
-      discoverTitle: "Les incontournables",
-      discoverDescription: "Sites classés UNESCO, paysages désertiques et trésors de patrimoine.",
+    apropos: {
+      badge: "À propos",
+      title: "Votre projet d'études, notre accompagnement.",
+      since: "Depuis 2023",
+      paragraphs: [
+        "Fastway Agency est une agence spécialisée dans l'orientation et la mobilité éducative internationale, basée à Nouakchott, en Mauritanie. Depuis 2023, nous accompagnons les étudiants dans la réalisation de leurs projets d'études à l'étranger.",
+        "Nous proposons un accompagnement personnalisé, de l'orientation académique jusqu'à l'admission et aux démarches de visa, en passant par la constitution et la préparation des dossiers.",
+        "Nous travaillons avec différentes destinations internationales, notamment la Turquie, l'Espagne, l'Allemagne, la Pologne, l'Irlande, la Chine, le Canada, la Malaisie, la Corée du Sud, l'Australie et les États-Unis.",
+        "Notre objectif est de permettre aux étudiants mauritaniens et africains d'accéder à des formations et établissements adaptés à leur profil, leur budget et leurs objectifs professionnels, tout en les accompagnant à chaque étape de leur parcours international.",
+      ],
+      signature: "Fastway Agency – Votre projet d'études, notre accompagnement.",
+      destinationsTitle: "Nos destinations",
       destinations: [
-        {
-          name: "Chinguetti",
-          desc: "Cité millénaire classée UNESCO, ses bibliothèques anciennes abritent des manuscrits inestimables.",
-        },
-        {
-          name: "Banc d'Arguin",
-          desc: "Parc national UNESCO, paradis ornithologique et site de pêche traditionnelle imrâguen.",
-        },
-        {
-          name: "Ouadane",
-          desc: "Ancienne ville caravanière perchée, vue spectaculaire sur le plateau de l'Adrar.",
-        },
-        {
-          name: "Oasis de Terjit",
-          desc: "Refuge de palmiers et sources d'eau cristalline, niché entre les falaises.",
-        },
-        {
-          name: "Train du désert",
-          desc: "L'un des plus longs trains au monde, traversée mythique du Sahara mauritanien.",
-        },
-        {
-          name: "Désert de l'Adrar",
-          desc: "Mer de dunes, ergs dorés et nuits étoilées sous la tente nomade.",
-        },
+        "Turquie", "Espagne", "Allemagne", "Pologne", "Irlande",
+        "Chine", "Canada", "Malaisie", "Corée du Sud", "Australie", "États-Unis",
       ],
-      experiencesEyebrow: "Expériences",
-      experiencesTitle: "Choisissez votre aventure",
-      experiences: [
-        { title: "Circuits désert", text: "Bivouacs, méharées et nuits sous les étoiles." },
-        { title: "Treks & randonnées", text: "Sur les plateaux et canyons de l'Adrar." },
-        { title: "Voyages culturels", text: "Rencontres, artisanat, sites historiques." },
-        { title: "Ornithologie", text: "Observation des oiseaux migrateurs au Banc d'Arguin." },
-      ],
-      practicalEyebrow: "Infos pratiques",
-      practicalTitle: "Bon à savoir avant le départ",
-      practical: [
-        { title: "Meilleure saison", text: "D'octobre à avril, climat sec et températures agréables." },
-        { title: "Durée idéale", text: "De 5 à 12 jours selon le circuit choisi." },
-        { title: "Inclus", text: "Transport, guides, hébergement, repas et activités." },
-      ],
-      ctaTitle: "Vivez la Mauritanie autrement",
-      ctaSubtitle: "Circuits sur-mesure ou départs en petit groupe : parlons de votre voyage idéal.",
-      ctaLabel: "Réserver mon aventure",
+      ctaTitle: "Discutons de votre projet",
+      ctaSubtitle: "Une évaluation gratuite de votre profil, sans engagement.",
+      ctaLabel: "Nous contacter",
     },
     contact: {
       badge: "Contact",
@@ -259,8 +231,7 @@ export const translations = {
       fieldServicePlaceholder: "Choisissez un service",
       serviceOptions: [
         "Études internationales",
-        "Tourisme médical",
-        "Découverte de la Mauritanie",
+        "Universités partenaires",
         "Autre",
       ],
       fieldMessage: "Message",
@@ -270,6 +241,7 @@ export const translations = {
       infoHours1: "Lundi – Samedi",
       infoHours2: "9h00 – 18h00",
       infoWhatsapp: "Discuter sur WhatsApp",
+      addressTitle: "Adresse",
       emailSubjectFallback: "Contact",
       emailBodyName: "Nom",
       emailBodyEmail: "Email",
@@ -283,24 +255,24 @@ export const translations = {
   en: {
     meta: {
       home: {
-        title: "Fast Way Agency — Explore the world, we handle the rest",
+        title: "Fast Way Agency — Your study project, our support",
         description:
-          "Travel and consulting agency: study abroad, medical tourism in Turkey, tours in Mauritania. Complete support from Fast Way Agency.",
+          "Agency specialized in international academic guidance and educational mobility, based in Nouakchott. Study in Turkey, Spain, Germany, Poland and more.",
       },
       etudes: {
         title: "International Studies — Fast Way Agency",
         description:
-          "Study in Turkey, Canada, Spain and more. Fast Way Agency supports you with your application, visa, enrollment and housing.",
+          "Study in Turkey, Spain, Germany, Poland and more. Fast Way Agency supports you with your application, visa, enrollment and housing.",
       },
-      medical: {
-        title: "Medical Tourism in Turkey — Fast Way Agency",
+      partenaires: {
+        title: "Our Partners — Fast Way Agency",
         description:
-          "Quality care in Turkey: cosmetic surgery, dental, hair, ophthalmology. Accredited clinics and full support.",
+          "Universities, schools and partner organizations of Fast Way Agency around the world: Poland, Germany, Spain, South Korea, Malaysia and more.",
       },
-      mauritanie: {
-        title: "Discover Mauritania — Fast Way Agency",
+      apropos: {
+        title: "About Us — Fast Way Agency",
         description:
-          "Chinguetti, Banc d'Arguin, the Adrar desert, the desert train. Experience authentic Mauritanian adventure with Fast Way Agency.",
+          "Fast Way Agency, an agency specialized in international academic guidance and educational mobility, based in Nouakchott, Mauritania, since 2023.",
       },
       contact: {
         title: "Contact — Fast Way Agency",
@@ -311,20 +283,28 @@ export const translations = {
     nav: {
       home: "Home",
       etudes: "Studies",
-      medical: "Medical Tourism",
-      mauritanie: "Mauritania",
+      partenaires: "Partners",
+      apropos: "About",
       contactCta: "Contact Us",
       openMenu: "Open menu",
       closeMenu: "Close menu",
     },
     footer: {
       tagline:
-        "Your trusted partner for studying abroad, medical tourism and discovering Mauritania.",
+        "Your trusted partner for international academic guidance and educational mobility, based in Nouakchott, Mauritania.",
       navigation: "Navigation",
       contact: "Contact",
+      addressLabel: "Address",
       hours: "Monday – Saturday",
       hoursTime: "9:00 AM – 6:00 PM",
       rights: "All rights reserved.",
+    },
+    company: {
+      name: "Fast Way Agency",
+      addressLine1: "Soco Ext 0206, TVZ",
+      addressLine2: "Nouakchott, Mauritania",
+      phone: "+222 37 44 89 97",
+      email: "fastwayagency97@gmail.com",
     },
     whatsapp: {
       label: "Contact Fast Way Agency on WhatsApp",
@@ -342,47 +322,47 @@ export const translations = {
     },
     home: {
       badge: "Fast Way Agency",
-      title1: "Explore the world,",
-      title2: "we handle the rest.",
+      title1: "Your study project,",
+      title2: "our support.",
       subtitle:
-        "Study abroad, medical tourism in Turkey, travel in Mauritania. One agency, three areas of expertise, and human support at every step.",
+        "Academic guidance, admission, visa and settling in. An agency specialized in international educational mobility, by your side at every step.",
       ctaContact: "Contact us",
       ctaServices: "Discover our services",
       stats: [
-        { value: "10+", label: "Destinations" },
+        { value: "11+", label: "Destinations" },
         { value: "250+", label: "Clients supported" },
-        { value: "5 years", label: "Of experience" },
+        { value: "2023", label: "Founded in" },
         { value: "24/7", label: "Support" },
       ],
       servicesEyebrow: "Our services",
-      servicesTitle: "Three areas of expertise, one agency",
+      servicesTitle: "One agency, complete support",
       servicesDescription: "Choose the service that fits your project. We take care of everything else.",
       services: [
         {
           title: "International Studies",
-          desc: "Turkey, Canada, Spain and more. Application, visa and enrollment handled from A to Z.",
+          desc: "Turkey, Spain, Germany, Poland and more. Application, visa and enrollment handled from A to Z.",
         },
         {
-          title: "Medical Tourism in Turkey",
-          desc: "Accredited clinics, organized stays and personalized follow-up for your peace of mind.",
+          title: "Partner Universities",
+          desc: "A network of carefully selected partner institutions and organizations worldwide.",
         },
         {
-          title: "Discover Mauritania",
-          desc: "Chinguetti, Banc d'Arguin, the Adrar desert. Authentic adventure, at your own pace.",
+          title: "Visa & Settling-in Support",
+          desc: "Application file preparation, visa procedures and support until you settle in abroad.",
         },
       ],
       learnMore: "Learn more",
       whyEyebrow: "Why us",
       whyTitle: "An agency truly by your side",
       whyDescription:
-        "We believe a great trip starts with real listening. Here's what makes the difference.",
+        "We believe a great academic journey starts with real listening. Here's what makes the difference.",
       advantages: [
         { title: "Trust", text: "Carefully selected partners and a transparent process." },
         { title: "Support", text: "A dedicated contact, from first call to your return." },
         { title: "Tailor-made", text: "Every project is designed around your profile and goals." },
         { title: "Global expertise", text: "A team that knows the ground in every destination." },
       ],
-      ctaTitle: "Ready to go?",
+      ctaTitle: "Ready to start your project?",
       ctaSubtitle: "Let's talk about your project. A reply within 24h, a free quote, zero commitment.",
       ctaLabel: "Start my project",
     },
@@ -393,30 +373,32 @@ export const translations = {
         "From choosing your university to settling in, we take care of every step so you can focus on what matters: succeeding.",
       destinationsEyebrow: "Destinations",
       destinationsTitle: "Choose your study destination",
-      destinationsDescription: "We work with a network of partner universities across three continents.",
+      destinationsDescription:
+        "We work with a network of partner universities, schools and organizations across several continents.",
       destinations: [
         { flag: "🇹🇷", name: "Turkey", points: ["Recognized universities", "Scholarships available", "Affordable cost"] },
-        {
-          flag: "🇨🇦",
-          name: "Canada",
-          points: ["Globally recognized degrees", "Post-study work permit", "English & French"],
-        },
-        { flag: "🇪🇸", name: "Spain", points: ["European area", "Pleasant living environment", "Spanish & English"] },
-        {
-          flag: "🇫🇷",
-          name: "France",
-          points: ["Prestigious universities", "Studies in French", "Student aid system"],
-        },
+        { flag: "🇪🇸", name: "Spain", points: ["Recognized language schools", "Pleasant living environment", "Spanish & English"] },
         {
           flag: "🇩🇪",
           name: "Germany",
           points: ["Reduced or free tuition", "Leading technical universities", "Strong employability"],
+        },
+        { flag: "🇵🇱", name: "Poland", points: ["Degrees recognized across the EU", "Affordable cost of living", "Programs in English"] },
+        { flag: "🇮🇪", name: "Ireland", points: ["English-speaking", "Post-study work permit", "Tech & pharma hub"] },
+        { flag: "🇨🇳", name: "China", points: ["Government scholarships", "Fast-growing universities", "Low cost of living"] },
+        {
+          flag: "🇨🇦",
+          name: "Canada",
+          points: ["Globally recognized degrees", "Post-study work permit", "English & French"],
         },
         {
           flag: "🇲🇾",
           name: "Malaysia",
           points: ["Programs in English", "Low cost of living", "Internationally recognized degrees"],
         },
+        { flag: "🇰🇷", name: "South Korea", points: ["English-taught international schools", "Innovation & technology", "Scholarships available"] },
+        { flag: "🇦🇺", name: "Australia", points: ["World-ranked universities", "Post-study work permit", "Quality of life"] },
+        { flag: "🇺🇸", name: "United States", points: ["Prestigious institutions", "Wide choice of programs", "International network"] },
       ],
       processEyebrow: "Our process",
       processTitle: "4 simple steps to your departure",
@@ -426,98 +408,61 @@ export const translations = {
         { title: "Visa & travel", text: "Full preparation of your visa file and departure logistics." },
         { title: "Settling in", text: "Housing, bank account opening, support upon arrival." },
       ],
+      partnersTeaserEyebrow: "Our network",
+      partnersTeaserTitle: "A network of partner universities and organizations",
+      partnersTeaserText:
+        "Discover the institutions and organizations we work with directly to secure your admission.",
+      partnersTeaserCta: "See our partners",
       ctaTitle: "Your study project starts here",
       ctaSubtitle:
         "Get a free assessment of your profile and a list of universities that match you.",
       ctaLabel: "Assess my profile",
     },
-    medical: {
-      badge: "Medical Tourism",
-      title: "Turkey, a world reference in healthcare",
+    partenaires: {
+      badge: "Partners",
+      title: "Our partner universities and organizations",
       subtitle:
-        "Enjoy top-level medical expertise, at accessible rates, in a comfortable setting. Everything is organized: travel, care, accommodation and follow-up.",
-      specialtiesEyebrow: "Specialties",
-      specialtiesTitle: "Care for every need",
-      specialtiesDescription:
-        "Our partners cover all major medical and cosmetic specialties.",
-      specialties: [
-        { title: "Cosmetic surgery" },
-        { title: "Dental care" },
-        { title: "Hair transplant" },
-        { title: "Ophthalmology" },
-        { title: "Bariatric surgery" },
-        { title: "Health checkups" },
+        "We work directly with a network of international institutions and organizations to secure your admission and your paperwork.",
+      schoolsEyebrow: "Institutions",
+      schoolsTitle: "Partner universities & schools",
+      schoolsDescription: "Our partner institutions for your studies abroad.",
+      servicesEyebrow: "Organizations",
+      servicesTitle: "Service partners",
+      servicesDescription: "Our partners for blocked accounts, insurance and administrative procedures.",
+      list: [
+        { name: "WSB University", country: "Poland", domain: "wsb.edu.pl", type: "school" },
+        { name: "CBS International Business School", country: "Germany", domain: "cbs.de", type: "school" },
+        { name: "Proyecto Español", country: "Spain (Alicante)", domain: "proyectoespanol.com", type: "school" },
+        { name: "iNMSOL", country: "Spain", domain: "inmsol.com", type: "school" },
+        { name: "ILSC Group", country: "International", domain: "ilsc.com", type: "school" },
+        { name: "Woosong University", country: "South Korea", domain: "wsu.ac.kr", type: "school" },
+        { name: "Lincoln University", country: "Malaysia", domain: "lincoln.edu.my", type: "school" },
+        { name: "Expatrio", country: "Germany", domain: "expatrio.com", type: "service" },
+        { name: "Fintiba", country: "Germany", domain: "fintiba.com", type: "service" },
       ],
-      careEyebrow: "Our support",
-      careTitle: "You rest, we handle everything",
-      care: [
-        { title: "Airport transfers", text: "Pick-up on arrival and departure." },
-        { title: "Accommodation", text: "Comfortable, well-located partner hotels." },
-        { title: "Translation", text: "French-speaking interpreter at every appointment." },
-        { title: "Medical follow-up", text: "Scheduled pre- and post-op consultations." },
-        { title: "Certified clinics", text: "JCI-accredited facilities and recognized doctors." },
-        { title: "24/7 assistance", text: "A dedicated contact, reachable at any time." },
-      ],
-      qualityTitle: "Quality and safety, without compromise",
-      qualityText:
-        "We only work with internationally accredited clinics and certified doctors with verified results. Your safety comes first.",
-      ctaTitle: "Get a personalized quote",
-      ctaSubtitle:
-        "Tell us what you need, and we'll get back to you with a complete program and a transparent quote.",
-      ctaLabel: "Request a quote",
+      ctaTitle: "Your institution isn't on the list?",
+      ctaSubtitle: "We are continuously expanding our network. Tell us about your project.",
+      ctaLabel: "Contact us",
     },
-    mauritanie: {
-      badge: "Mauritania",
-      title: "The Sahara, in its purest form.",
-      subtitle:
-        "Ancient cities, endless dunes, hidden oases and legendary hospitality. Mauritania awaits you for a rare adventure, off the beaten path.",
-      discoverEyebrow: "To discover",
-      discoverTitle: "The must-sees",
-      discoverDescription: "UNESCO-listed sites, desert landscapes and heritage treasures.",
+    apropos: {
+      badge: "About",
+      title: "Your study project, our support.",
+      since: "Since 2023",
+      paragraphs: [
+        "Fast Way Agency is an agency specialized in international academic guidance and educational mobility, based in Nouakchott, Mauritania. Since 2023, we have been supporting students in bringing their study-abroad projects to life.",
+        "We offer personalized support, from academic guidance to admission and visa procedures, including building and preparing application files.",
+        "We work with a range of international destinations, including Turkey, Spain, Germany, Poland, Ireland, China, Canada, Malaysia, South Korea, Australia and the United States.",
+        "Our goal is to give Mauritanian and African students access to programs and institutions suited to their profile, budget and career goals, while supporting them at every step of their international journey.",
+      ],
+      signature: "Fast Way Agency – Your study project, our support.",
+      destinationsTitle: "Our destinations",
       destinations: [
-        {
-          name: "Chinguetti",
-          desc: "A UNESCO-listed ancient city, its old libraries hold priceless manuscripts.",
-        },
-        {
-          name: "Banc d'Arguin",
-          desc: "UNESCO national park, a birdwatcher's paradise and site of traditional Imraguen fishing.",
-        },
-        {
-          name: "Ouadane",
-          desc: "An old caravan town perched high, with a spectacular view of the Adrar plateau.",
-        },
-        {
-          name: "Terjit Oasis",
-          desc: "A refuge of palm trees and crystal-clear springs, nestled between cliffs.",
-        },
-        {
-          name: "Desert Train",
-          desc: "One of the longest trains in the world, a legendary crossing of the Mauritanian Sahara.",
-        },
-        {
-          name: "Adrar Desert",
-          desc: "A sea of dunes, golden ergs and starry nights under a nomad tent.",
-        },
+        "Turkey", "Spain", "Germany", "Poland", "Ireland",
+        "China", "Canada", "Malaysia", "South Korea", "Australia", "United States",
       ],
-      experiencesEyebrow: "Experiences",
-      experiencesTitle: "Choose your adventure",
-      experiences: [
-        { title: "Desert tours", text: "Bivouacs, camel treks and nights under the stars." },
-        { title: "Treks & hikes", text: "Across the plateaus and canyons of the Adrar." },
-        { title: "Cultural trips", text: "Encounters, crafts, historic sites." },
-        { title: "Birdwatching", text: "Watch migratory birds at Banc d'Arguin." },
-      ],
-      practicalEyebrow: "Practical info",
-      practicalTitle: "Good to know before you leave",
-      practical: [
-        { title: "Best season", text: "October to April, dry climate and pleasant temperatures." },
-        { title: "Ideal duration", text: "5 to 12 days depending on the chosen tour." },
-        { title: "Included", text: "Transport, guides, accommodation, meals and activities." },
-      ],
-      ctaTitle: "Experience Mauritania differently",
-      ctaSubtitle: "Tailor-made tours or small group departures: let's talk about your ideal trip.",
-      ctaLabel: "Book my adventure",
+      ctaTitle: "Let's talk about your project",
+      ctaSubtitle: "A free assessment of your profile, with no commitment.",
+      ctaLabel: "Contact us",
     },
     contact: {
       badge: "Contact",
@@ -538,8 +483,7 @@ export const translations = {
       fieldServicePlaceholder: "Choose a service",
       serviceOptions: [
         "International Studies",
-        "Medical Tourism",
-        "Discover Mauritania",
+        "Partner Universities",
         "Other",
       ],
       fieldMessage: "Message",
@@ -549,6 +493,7 @@ export const translations = {
       infoHours1: "Monday – Saturday",
       infoHours2: "9:00 AM – 6:00 PM",
       infoWhatsapp: "Chat on WhatsApp",
+      addressTitle: "Address",
       emailSubjectFallback: "Contact",
       emailBodyName: "Name",
       emailBodyEmail: "Email",

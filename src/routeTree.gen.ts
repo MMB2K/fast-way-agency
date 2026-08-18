@@ -10,14 +10,21 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TourismeMedicalRouteImport } from './routes/tourisme-medical'
+import { Route as PartenairesRouteImport } from './routes/partenaires'
 import { Route as MauritanieRouteImport } from './routes/mauritanie'
 import { Route as EtudesRouteImport } from './routes/etudes'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as AProposRouteImport } from './routes/a-propos'
 import { Route as IndexRouteImport } from './routes/index'
 
 const TourismeMedicalRoute = TourismeMedicalRouteImport.update({
   id: '/tourisme-medical',
   path: '/tourisme-medical',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PartenairesRoute = PartenairesRouteImport.update({
+  id: '/partenaires',
+  path: '/partenaires',
   getParentRoute: () => rootRouteImport,
 } as any)
 const MauritanieRoute = MauritanieRouteImport.update({
@@ -35,6 +42,11 @@ const ContactRoute = ContactRouteImport.update({
   path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AProposRoute = AProposRouteImport.update({
+  id: '/a-propos',
+  path: '/a-propos',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -43,45 +55,69 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/a-propos': typeof AProposRoute
   '/contact': typeof ContactRoute
   '/etudes': typeof EtudesRoute
   '/mauritanie': typeof MauritanieRoute
+  '/partenaires': typeof PartenairesRoute
   '/tourisme-medical': typeof TourismeMedicalRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/a-propos': typeof AProposRoute
   '/contact': typeof ContactRoute
   '/etudes': typeof EtudesRoute
   '/mauritanie': typeof MauritanieRoute
+  '/partenaires': typeof PartenairesRoute
   '/tourisme-medical': typeof TourismeMedicalRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/a-propos': typeof AProposRoute
   '/contact': typeof ContactRoute
   '/etudes': typeof EtudesRoute
   '/mauritanie': typeof MauritanieRoute
+  '/partenaires': typeof PartenairesRoute
   '/tourisme-medical': typeof TourismeMedicalRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/contact' | '/etudes' | '/mauritanie' | '/tourisme-medical'
-  fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/contact' | '/etudes' | '/mauritanie' | '/tourisme-medical'
-  id:
-    | '__root__'
+  fullPaths:
     | '/'
+    | '/a-propos'
     | '/contact'
     | '/etudes'
     | '/mauritanie'
+    | '/partenaires'
+    | '/tourisme-medical'
+  fileRoutesByTo: FileRoutesByTo
+  to:
+    | '/'
+    | '/a-propos'
+    | '/contact'
+    | '/etudes'
+    | '/mauritanie'
+    | '/partenaires'
+    | '/tourisme-medical'
+  id:
+    | '__root__'
+    | '/'
+    | '/a-propos'
+    | '/contact'
+    | '/etudes'
+    | '/mauritanie'
+    | '/partenaires'
     | '/tourisme-medical'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AProposRoute: typeof AProposRoute
   ContactRoute: typeof ContactRoute
   EtudesRoute: typeof EtudesRoute
   MauritanieRoute: typeof MauritanieRoute
+  PartenairesRoute: typeof PartenairesRoute
   TourismeMedicalRoute: typeof TourismeMedicalRoute
 }
 
@@ -92,6 +128,13 @@ declare module '@tanstack/react-router' {
       path: '/tourisme-medical'
       fullPath: '/tourisme-medical'
       preLoaderRoute: typeof TourismeMedicalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/partenaires': {
+      id: '/partenaires'
+      path: '/partenaires'
+      fullPath: '/partenaires'
+      preLoaderRoute: typeof PartenairesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/mauritanie': {
@@ -115,6 +158,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/a-propos': {
+      id: '/a-propos'
+      path: '/a-propos'
+      fullPath: '/a-propos'
+      preLoaderRoute: typeof AProposRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -127,9 +177,11 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AProposRoute: AProposRoute,
   ContactRoute: ContactRoute,
   EtudesRoute: EtudesRoute,
   MauritanieRoute: MauritanieRoute,
+  PartenairesRoute: PartenairesRoute,
   TourismeMedicalRoute: TourismeMedicalRoute,
 }
 export const routeTree = rootRouteImport

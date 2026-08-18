@@ -12,7 +12,7 @@ export function Footer() {
         <div>
           <div className="flex items-center gap-3">
             <img src={logo} alt="Fast Way Agency" className="h-12 w-12 rounded-full" />
-            <span className="font-display text-lg font-bold">Fast Way Agency</span>
+            <span className="font-display text-lg font-bold">{t.company.name}</span>
           </div>
           <p className="mt-4 text-sm leading-relaxed text-white/70">
             {t.footer.tagline}
@@ -26,8 +26,8 @@ export function Footer() {
           <ul className="mt-4 space-y-2 text-sm text-white/80">
             <li><Link to="/" className="hover:text-orange">{t.nav.home}</Link></li>
             <li><Link to="/etudes" className="hover:text-orange">{t.nav.etudes}</Link></li>
-            <li><Link to="/tourisme-medical" className="hover:text-orange">{t.nav.medical}</Link></li>
-            <li><Link to="/mauritanie" className="hover:text-orange">{t.nav.mauritanie}</Link></li>
+            <li><Link to="/partenaires" className="hover:text-orange">{t.nav.partenaires}</Link></li>
+            <li><Link to="/a-propos" className="hover:text-orange">{t.nav.apropos}</Link></li>
             <li><Link to="/contact" className="hover:text-orange">{t.footer.contact}</Link></li>
           </ul>
         </div>
@@ -39,24 +39,28 @@ export function Footer() {
           <ul className="mt-4 space-y-3 text-sm text-white/80">
             <li className="flex items-start gap-3">
               <Mail className="mt-0.5 h-4 w-4 shrink-0 text-orange" />
-              <a href="mailto:fastwayagency97@gmail.com" className="break-all hover:text-orange">
-                fastwayagency97@gmail.com
+              <a href={`mailto:${t.company.email}`} className="break-all hover:text-orange">
+                {t.company.email}
               </a>
             </li>
             <li className="flex items-start gap-3">
               <Phone className="mt-0.5 h-4 w-4 shrink-0 text-orange" />
-              <a href="tel:+22237448997" className="hover:text-orange">+222 37 44 89 97</a>
+              <a href="tel:+22237448997" className="hover:text-orange">{t.company.phone}</a>
             </li>
             <li className="flex items-start gap-3">
               <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-orange" />
-              <span>Nouakchott, Mauritanie</span>
+              <span>
+                {t.company.addressLine1}
+                <br />
+                {t.company.addressLine2}
+              </span>
             </li>
           </ul>
         </div>
       </div>
       <div className="border-t border-white/10">
         <div className="mx-auto max-w-6xl px-4 py-5 text-center text-xs text-white/50 sm:px-6">
-          © {new Date().getFullYear()} Fast Way Agency. {t.footer.rights}
+          © {new Date().getFullYear()} {t.company.name}. {t.footer.rights}
         </div>
       </div>
     </footer>
